@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Emotional Black Market</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <div class="app">
+
+    <aside class="sidebar">
+      <h2>🧠 EBM</h2>
+      <p>Emotional Black Market</p>
+
+      <nav>
+        <button onclick="mostrarVista('dashboard')">Dashboard</button>
+        <button onclick="mostrarVista('usuarios')">Usuarios</button>
+        <button onclick="mostrarVista('emociones')">Emociones</button>
+        <button onclick="mostrarVista('transacciones')">Transacciones</button>
+      </nav>
+    </aside>
+
+    <main class="content">
+
+      <!-- DASHBOARD -->
+      <section id="dashboard" class="vista">
+        <h1>Dashboard</h1>
+
+        <div class="stats">
+          <div class="card">
+            <span>Usuarios</span>
+            <h2 id="totalUsuarios">0</h2>
+          </div>
+
+          <div class="card">
+            <span>Emociones</span>
+            <h2 id="totalEmociones">0</h2>
+          </div>
+
+          <div class="card">
+            <span>Transacciones</span>
+            <h2 id="totalTransacciones">0</h2>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>📊 Ventas por emoción</h2>
+          <canvas id="grafica"></canvas>
+        </div>
+      </section>
+
+      <!-- USUARIOS -->
+      <section id="usuarios" class="vista oculto">
+        <h1>Usuarios</h1>
+
+        <div class="card">
+          <h3>Crear Usuario</h3>
+          <input type="text" id="nuevoNombre" placeholder="Nombre">
+          <input type="email" id="nuevoEmail" placeholder="Email">
+          <input type="number" id="nuevoSaldo" placeholder="Saldo emocional">
+          <button onclick="crearUsuario()">Crear</button>
+        </div>
+
+        <div id="listaUsuarios"></div>
+      </section>
+
+      <!-- EMOCIONES -->
+      <section id="emociones" class="vista oculto">
+        <h1>Emociones</h1>
+
+        <div class="card">
+          <h3>Crear Emoción</h3>
+          <input type="text" id="nuevoNombreEmocion" placeholder="Nombre">
+          <input type="number" id="nuevaIntensidad" placeholder="Intensidad">
+          <input type="number" id="nuevoPrecio" placeholder="Precio base">
+          <button onclick="crearEmocion()">Crear</button>
+        </div>
+
+        <div id="listaEmociones"></div>
+      </section>
+
+      <!-- TRANSACCIONES -->
+      <section id="transacciones" class="vista oculto">
+        <h1>Transacciones</h1>
+
+        <div class="card">
+          <h3>Nueva Transacción</h3>
+
+          <select id="selectUsuario"></select>
+          <select id="selectEmocion"></select>
+          <input type="number" id="cantidadTransaccion" placeholder="Cantidad">
+          <button onclick="crearTransaccion()">Comprar</button>
+        </div>
+
+        <div id="listaTransacciones"></div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
