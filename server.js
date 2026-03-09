@@ -5,26 +5,30 @@ const usuarioRoutes = require("./routes/usuarioRoutes");
 const emocionRoutes = require("./routes/emocionRoutes");
 const transaccionRoutes = require("./routes/transaccionRoutes");
 
-
+const swaggerUi = require("swagger-ui-express");
+const YAML = require("yamljs");
 
 const app = express();
 
-// Conectar base de datos
+// cargar openapi
+const swaggerDocument = YAML.load("./openapi.yaml");
+
+// conectar DB
 connectDB();
 
-// Middleware para leer JSON
 app.use(express.json());
 
-// Servir archivos estáticos (frontend)
+// frontend
 app.use(express.static("public"));
 
+// rutas API
 app.use("/usuarios", usuarioRoutes);
 app.use("/emociones", emocionRoutes);
 app.use("/transacciones", transaccionRoutes);
 
+// swagger
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-
-// Ruta de prueba
 app.get("/", (req, res) => {
   res.json({ mensaje: "Servidor funcionando 🚀" });
 });

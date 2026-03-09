@@ -1,0 +1,105 @@
+openapi: 3.0.0
+info:
+  title: API Mercado Negro de Emociones
+  version: 1.0.0
+  description: API para gestionar usuarios dentro del mercado de emociones
+
+servers:
+  - url: http://localhost:3000
+
+paths:
+
+  /usuarios:
+    get:
+      summary: Obtener todos los usuarios
+      responses:
+        '200':
+          description: Lista de usuarios
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Usuario'
+
+    post:
+      summary: Crear un nuevo usuario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Usuario'
+      responses:
+        '201':
+          description: Usuario creado correctamente
+
+  /usuarios/{id}:
+    get:
+      summary: Obtener usuario por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Usuario encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuario'
+
+    put:
+      summary: Actualizar usuario
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Usuario actualizado
+
+    delete:
+      summary: Eliminar usuario
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Usuario eliminado
+
+components:
+
+  schemas:
+
+    Usuario:
+      type: object
+      properties:
+        nombre:
+          type: string
+          example: Oumniya
+        email:
+          type: string
+          example: oum@email.com
+        saldoEmocional:
+          type: number
+          example: 500
+        estadoMental:
+          type: string
+          example: estable
+        nivelRiesgo:
+          type: number
+          example: 5
+        activo:
+          type: boolean
+          example: true
+        fechaRegistro:
+          type: string
+          format: date-time
