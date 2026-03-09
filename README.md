@@ -7,15 +7,19 @@
   <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=22&pause=1200&color=FF005C&center=true&vCenter=true&width=800&lines=Emotional+volatility+detected.;Balance+under+stress.;Market+instability+increasing.;Proceed+with+caution."/>
 </p>
 
+<p align="center">
+<span><b>REST Architecture · MongoDB Persistence · Automated Testing · OpenAPI Documentation</b></span>
+</p>
+
 ---
 
 ## ⚡ Concept
 
-What if emotions behaved like financial assets?
+>What if emotions behaved like financial assets?
 
-What if happiness had a price?
+>What if happiness had a price?
 
-What if your mental stability could collapse like a market crash?
+>What if your mental stability could collapse like a market crash?
 
 **Mercado Negro de Emociones** is a fictional emotional trading system built with a full REST architecture, persistent storage and relational modeling.
 
@@ -36,8 +40,10 @@ routes/
 controllers/
 middleware/
 public/
+tests/
 seed.js
 server.js
+openapi.yaml
 
 ````
 
@@ -71,13 +77,57 @@ Implemented using:
 
 ---
 
+## 🧪 Automated Testing
+
+The system includes automated tests using **Jest** to validate the data models.
+
+Tests cover both valid and invalid scenarios to ensure schema integrity.
+
+**Coverage includes:**
+
+◉ User model validation 
+◉ Emotion model validation  
+◉ Default values 
+◉ Enum constraints
+◉ Min / Max validation errors  
+
+Run the tests with:
+
+```bash
+npm test
+````
+
+This executes **10 automated tests**, including several negative cases that trigger Mongoose validation errors.
+
+---
+
+## 📚 API Documentation
+
+The API is documented using the **OpenAPI Specification**.
+
+The CRUD operations for the `User` model are described in:
+
+```
+openapi.yaml
+```
+
+Interactive documentation is available through **Swagger UI**:
+
+```
+http://localhost:3000/api-docs
+```
+
+This interface allows visual exploration of the API endpoints and their responses.
+
+---
+
 ## 🚀 Run Locally
 
 ```bash
 npm install
 npm run seed
 npm run dev
-````
+```
 
 Open:
 
@@ -91,14 +141,14 @@ The emotional market is now live.
 
 ## 🩺 System Integrity
 
-◉ Models Deployed  
-◉ Constraints Enforced  
-◉ Relations Linked  
-◉ Endpoints Responsive  
-◉ Middleware Guarding  
-◉ Balance Logic Active  
+◉ Models Deployed<br>
+◉ Constraints Enforced<br>
+◉ Relations Linked<br>
+◉ Endpoints Responsive<br>
+◉ Middleware Guarding<br>
+◉ Balance Logic Active
 
-────────────  
+────────────
 STATUS: STABLE
 
 ---
@@ -115,13 +165,14 @@ A technical structure.
 With psychological consequences.
 
 ---
-# 👩‍💻 **Quién Está Detrás del Código**
+
+# 👩‍💻 Quién Está Detrás del Código
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d549c019-35bb-4af8-8e61-8d6885c6cd9b" width="200">
 </p>
 
-**Oumniya — Developer & Designer**<br>
+**Oumniya — Developer & Designer**
 GitHub: [https://github.com/Oumniya17](https://github.com/Oumniya17)
 
 ---
@@ -133,3 +184,5 @@ GitHub: [https://github.com/Oumniya17](https://github.com/Oumniya17)
 <p align="center"> 
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:203a43,100:0f2027&height=120&section=footer"/> 
 </p>
+
+
