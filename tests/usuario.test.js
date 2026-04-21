@@ -1,8 +1,10 @@
+const chai = require("chai");
+const expect = chai.expect;
 const Usuario = require("../models/Usuario");
 
 describe("Modelo Usuario", () => {
 
-test("Crear usuario válido", async () => {
+it("Crear usuario válido", () => {
 
 const usuario = new Usuario({
 nombre: "Ana",
@@ -10,22 +12,22 @@ email: "ana@email.com",
 saldoEmocional: 200
 });
 
-expect(usuario.nombre).toBe("Ana");
+expect(usuario.nombre).to.equal("Ana");
 
 });
 
-test("Saldo emocional por defecto", () => {
+it("Saldo emocional por defecto", () => {
 
 const usuario = new Usuario({
 nombre: "Luis",
 email: "luis@email.com"
 });
 
-expect(usuario.saldoEmocional).toBe(100);
+expect(usuario.saldoEmocional).to.equal(100);
 
 });
 
-test("Estado mental válido", () => {
+it("Estado mental válido", () => {
 
 const usuario = new Usuario({
 nombre: "Mario",
@@ -33,11 +35,11 @@ email: "mario@email.com",
 estadoMental: "estable"
 });
 
-expect(usuario.estadoMental).toBe("estable");
+expect(usuario.estadoMental).to.equal("estable");
 
 });
 
-test("Error si falta nombre", () => {
+it("Error si falta nombre", () => {
 
 const usuario = new Usuario({
 email: "test@email.com"
@@ -45,11 +47,11 @@ email: "test@email.com"
 
 const error = usuario.validateSync();
 
-expect(error.errors.nombre).toBeDefined();
+expect(error.errors.nombre).to.exist;
 
 });
 
-test("Error nombre muy corto", () => {
+it("Error nombre muy corto", () => {
 
 const usuario = new Usuario({
 nombre: "A",
@@ -58,7 +60,7 @@ email: "test@email.com"
 
 const error = usuario.validateSync();
 
-expect(error.errors.nombre).toBeDefined();
+expect(error.errors.nombre).to.exist;
 
 });
 

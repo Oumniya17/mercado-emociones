@@ -1,8 +1,10 @@
+const chai = require("chai");
+const expect = chai.expect;
 const Emocion = require("../models/Emocion");
 
 describe("Modelo Emocion", () => {
 
-test("Crear emoción válida", () => {
+it("Crear emoción válida", () => {
 
 const emocion = new Emocion({
 nombre: "Felicidad",
@@ -11,11 +13,11 @@ intensidad: 80,
 precioBase: 50
 });
 
-expect(emocion.nombre).toBe("Felicidad");
+expect(emocion.nombre).to.equal("Felicidad");
 
 });
 
-test("Rareza por defecto", () => {
+it("Rareza por defecto", () => {
 
 const emocion = new Emocion({
 nombre: "Alegria",
@@ -24,11 +26,11 @@ intensidad: 60,
 precioBase: 30
 });
 
-expect(emocion.rareza).toBe("comun");
+expect(emocion.rareza).to.equal("comun");
 
 });
 
-test("Error intensidad mayor a 100", () => {
+it("Error intensidad mayor a 100", () => {
 
 const emocion = new Emocion({
 nombre: "Extrema",
@@ -39,11 +41,11 @@ precioBase: 20
 
 const error = emocion.validateSync();
 
-expect(error.errors.intensidad).toBeDefined();
+expect(error.errors.intensidad).to.exist;
 
 });
 
-test("Error tipo inválido", () => {
+it("Error tipo inválido", () => {
 
 const emocion = new Emocion({
 nombre: "Desconocida",
@@ -54,11 +56,11 @@ precioBase: 20
 
 const error = emocion.validateSync();
 
-expect(error.errors.tipo).toBeDefined();
+expect(error.errors.tipo).to.exist;
 
 });
 
-test("Error precio negativo", () => {
+it("Error precio negativo", () => {
 
 const emocion = new Emocion({
 nombre: "Tristeza",
@@ -69,7 +71,7 @@ precioBase: -10
 
 const error = emocion.validateSync();
 
-expect(error.errors.precioBase).toBeDefined();
+expect(error.errors.precioBase).to.exist;
 
 });
 
