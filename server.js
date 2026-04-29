@@ -4,6 +4,7 @@ const connectDB = require("./config/db");
 const usuarioRoutes = require("./routes/usuarioRoutes");
 const emocionRoutes = require("./routes/emocionRoutes");
 const transaccionRoutes = require("./routes/transaccionRoutes");
+const authRoutes = require("./routes/authRoutes"); 
 
 const swaggerUi = require("swagger-ui-express");
 const YAML = require("yamljs");
@@ -25,6 +26,7 @@ app.use(express.static("public"));
 app.use("/usuarios", usuarioRoutes);
 app.use("/emociones", emocionRoutes);
 app.use("/transacciones", transaccionRoutes);
+app.use("/auth", authRoutes); 
 
 // swagger
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
