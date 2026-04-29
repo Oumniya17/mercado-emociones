@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-<span><b>REST Architecture · MongoDB Persistence · Automated Testing · OpenAPI Documentation</b></span>
+<span><b>REST Architecture · MongoDB Persistence · Authentication & Authorization · Automated Testing · OpenAPI Documentation</b></span>
 </p>
 
 ---
@@ -53,6 +53,13 @@ openapi.yaml
 - 💜 **Emotion**
 - 💳 **Transaction**
 
+### 🔐 Security Layer
+
+- JWT Authentication (`register`, `login`, `refresh`)
+- Role-Based Authorization (`user`, `admin`)
+- Protected Routes with middleware
+- Access Control enforced at route level
+
 Relationships:
 
 - One User → Many Transactions  
@@ -74,21 +81,46 @@ Implemented using:
 ◉ Dynamic Pricing Engine  
 ◉ Market Analytics Endpoints  
 ◉ Automated Seed Initialization  
+◉ 🔐 Authentication & Authorization System  
+
+---
+
+## 🔐 Authentication & Authorization
+
+The system includes a complete security layer:
+
+### Authentication (JWT)
+
+- User registration  
+- Secure login with encrypted passwords (bcrypt)  
+- Token-based authentication  
+- Token refresh endpoint  
+
+### Authorization (Roles)
+
+- Default role: `user`  
+- Admin role: `admin`  
+- Role-based access control on critical routes  
+
+### Protected Endpoints
+
+- User data requires authentication  
+- Sensitive operations (update/delete) require admin privileges  
 
 ---
 
 ## 🧪 Automated Testing
 
-The system includes automated tests using **Jest** to validate the data models.
+The system includes automated tests using **Mocha & Chai** to validate the data models.
 
 Tests cover both valid and invalid scenarios to ensure schema integrity.
 
 **Coverage includes:**
 
-◉ User model validation 
+◉ User model validation  
 ◉ Emotion model validation  
-◉ Default values 
-◉ Enum constraints
+◉ Default values  
+◉ Enum constraints  
 ◉ Min / Max validation errors  
 
 Run the tests with:
@@ -97,7 +129,7 @@ Run the tests with:
 npm test
 ````
 
-This executes **10 automated tests**, including several negative cases that trigger Mongoose validation errors.
+This executes **10 automated tests**, including negative cases that trigger validation errors.
 
 ---
 
@@ -105,19 +137,39 @@ This executes **10 automated tests**, including several negative cases that trig
 
 The API is documented using the **OpenAPI Specification**.
 
-The CRUD operations for the `User` model are described in:
+The CRUD operations for the `User` model include:
+
+* Success responses (`200`, `201`)
+* Client errors (`400`, `404`)
+* Server errors (`500`)
+
+Documentation file:
 
 ```
 openapi.yaml
 ```
 
-Interactive documentation is available through **Swagger UI**:
+Interactive documentation via Swagger:
 
 ```
 http://localhost:3000/api-docs
 ```
 
-This interface allows visual exploration of the API endpoints and their responses.
+---
+
+## 🌐 Frontend Integration
+
+A lightweight frontend interface is included:
+
+* User creation form
+* Direct interaction with API endpoints
+* Real-time data persistence in MongoDB
+
+Accessible at:
+
+```
+http://localhost:3000
+```
 
 ---
 
@@ -146,7 +198,8 @@ The emotional market is now live.
 ◉ Relations Linked<br>
 ◉ Endpoints Responsive<br>
 ◉ Middleware Guarding<br>
-◉ Balance Logic Active
+◉ Balance Logic Active<br>
+◉ 🔐 Security Layer Active
 
 ────────────
 STATUS: STABLE
@@ -184,5 +237,4 @@ GitHub: [https://github.com/Oumniya17](https://github.com/Oumniya17)
 <p align="center"> 
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:203a43,100:0f2027&height=120&section=footer"/> 
 </p>
-
-
+```
