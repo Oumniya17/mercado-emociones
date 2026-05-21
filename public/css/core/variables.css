@@ -1,0 +1,124 @@
+/* ===================================
+   ROOT VARIABLES
+=================================== */
+
+:root {
+
+  /* COLORS */
+
+  --color-primary:
+    #00ffff;
+
+  --color-secondary:
+    #7b2cff;
+
+  --color-accent:
+    #ff00c8;
+
+  --color-success:
+    #00ff95;
+
+  --color-danger:
+    #ff4d7a;
+
+  --color-warning:
+    #ffb800;
+
+  /* BACKGROUNDS */
+
+  --bg-main:
+    #050816;
+
+  --bg-card:
+    rgba(14,18,35,0.72);
+
+  --bg-input:
+    rgba(255,255,255,0.04);
+
+  --bg-hover:
+    rgba(255,255,255,0.06);
+
+  /* TEXT */
+
+  --text-primary:
+    #ffffff;
+
+  --text-secondary:
+    #8a93b2;
+
+  --text-muted:
+    #5c6480;
+
+  /* BORDERS */
+
+  --border-primary:
+    rgba(255,255,255,0.08);
+
+  --border-active:
+    rgba(0,255,255,0.3);
+
+  /* SHADOWS */
+
+  --shadow-primary:
+    0 10px 30px rgba(0,0,0,0.35);
+
+  --shadow-neon:
+    0 0 25px rgba(0,255,255,0.15);
+
+  /* RADIUS */
+
+  --radius-sm:
+    12px;
+
+  --radius-md:
+    18px;
+
+  --radius-lg:
+    28px;
+
+  --radius-full:
+    999px;
+
+  /* SPACING */
+
+  --space-xs:
+    8px;
+
+  --space-sm:
+    12px;
+
+  --space-md:
+    18px;
+
+  --space-lg:
+    28px;
+
+  --space-xl:
+    42px;
+
+  /* TRANSITIONS */
+
+  --transition-fast:
+    0.2s ease;
+
+  --transition-normal:
+    0.3s ease;
+
+  --transition-slow:
+    0.5s ease;
+
+  /* BLUR */
+
+  --blur-card:
+    blur(20px);
+
+  /* SIDEBAR */
+
+  --sidebar-width:
+    280px;
+
+  /* NAVBAR */
+
+  --navbar-height:
+    90px;
+}

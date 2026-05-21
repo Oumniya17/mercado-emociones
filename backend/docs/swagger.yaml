@@ -1,0 +1,121 @@
+openapi: 3.0.0
+
+info:
+  title: Emotional Black Market API
+  version: 1.0.0
+  description: Emotional trading platform API
+
+servers:
+  - url: http://localhost:3000/api
+
+paths:
+
+  /auth/login:
+    post:
+      summary: Login user
+      tags:
+        - Auth
+
+      requestBody:
+        required: true
+
+        content:
+          application/json:
+            schema:
+              type: object
+
+              properties:
+                email:
+                  type: string
+
+                password:
+                  type: string
+
+      responses:
+        200:
+          description: Login successful
+
+  /auth/register:
+    post:
+      summary: Register user
+      tags:
+        - Auth
+
+      requestBody:
+        required: true
+
+        content:
+          application/json:
+            schema:
+              type: object
+
+              properties:
+                nombre:
+                  type: string
+
+                email:
+                  type: string
+
+                password:
+                  type: string
+
+      responses:
+        201:
+          description: User created
+
+  /users:
+    get:
+      summary: Get users
+      tags:
+        - Users
+
+      responses:
+        200:
+          description: Users list
+
+  /emotions:
+    get:
+      summary: Get emotions
+      tags:
+        - Emotions
+
+      responses:
+        200:
+          description: Emotions list
+
+  /transactions:
+    get:
+      summary: Get transactions
+      tags:
+        - Transactions
+
+      responses:
+        200:
+          description: Transactions list
+
+    post:
+      summary: Create transaction
+      tags:
+        - Transactions
+
+      requestBody:
+        required: true
+
+        content:
+          application/json:
+            schema:
+              type: object
+
+              properties:
+                emocion:
+                  type: string
+
+                cantidad:
+                  type: number
+
+                tipoOperacion:
+                  type: string
+
+      responses:
+        201:
+          description: Transaction created

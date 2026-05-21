@@ -1,0 +1,40 @@
+/* ===================================
+   NAVBAR
+=================================== */
+
+.navbar {
+
+  height:
+    var(--navbar-height);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom:
+    var(--space-xl);
+}
+
+/* ===================================
+   TITLE
+=================================== */
+
+.navbar-title {
+
+  font-size: 2rem;
+}
+
+/* ===================================
+   ACTIONS
+=================================== */
+
+.navbar-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  gap:
+    var(--space-md);
+}

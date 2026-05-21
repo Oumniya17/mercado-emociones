@@ -1,0 +1,105 @@
+/* ===================================
+   RESET
+=================================== */
+
+*,
+*::before,
+*::after {
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+/* ===================================
+   HTML & BODY
+=================================== */
+
+html {
+
+  scroll-behavior: smooth;
+}
+
+body {
+
+  min-height: 100vh;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+
+  overflow-x: hidden;
+}
+
+/* ===================================
+   MEDIA
+=================================== */
+
+img,
+picture,
+video,
+canvas,
+svg {
+
+  display: block;
+
+  max-width: 100%;
+}
+
+/* ===================================
+   INPUTS
+=================================== */
+
+input,
+button,
+textarea,
+select {
+
+  font: inherit;
+}
+
+/* ===================================
+   BUTTONS
+=================================== */
+
+button {
+
+  border: none;
+
+  background: none;
+
+  cursor: pointer;
+}
+
+/* ===================================
+   LINKS
+=================================== */
+
+a {
+
+  text-decoration: none;
+
+  color: inherit;
+}
+
+/* ===================================
+   LISTS
+=================================== */
+
+ul,
+ol {
+
+  list-style: none;
+}
+
+/* ===================================
+   TABLES
+=================================== */
+
+table {
+
+  border-collapse: collapse;
+
+  border-spacing: 0;
+}

@@ -1,0 +1,159 @@
+/* ===================================
+   ADMIN HEADER
+=================================== */
+
+.admin-header {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom:
+    var(--space-xl);
+}
+
+/* ===================================
+   STATUS GRID
+=================================== */
+
+.status-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+
+  gap:
+    var(--space-lg);
+
+  margin-bottom:
+    var(--space-xl);
+}
+
+/* ===================================
+   STATUS CARD
+=================================== */
+
+.status-card {
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* ===================================
+   STATUS VALUE
+=================================== */
+
+.status-value {
+
+  margin-top:
+    var(--space-md);
+
+  font-size: 2.5rem;
+
+  color:
+    var(--color-success);
+}
+
+/* ===================================
+   LOGS PANEL
+=================================== */
+
+.logs-panel {
+
+  min-height: 650px;
+}
+
+/* ===================================
+   LOGS CONTAINER
+=================================== */
+
+.logs-container {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap:
+    var(--space-md);
+
+  margin-top:
+    var(--space-lg);
+}
+
+/* ===================================
+   LOG ITEM
+=================================== */
+
+.log-item {
+
+  padding:
+    var(--space-md);
+
+  border-radius:
+    var(--radius-md);
+
+  background:
+    rgba(255,255,255,0.03);
+
+  border:
+    1px solid rgba(255,255,255,0.04);
+
+  transition:
+    var(--transition-normal);
+}
+
+/* ===================================
+   HOVER
+=================================== */
+
+.log-item:hover {
+
+  transform:
+    translateX(5px);
+
+  border-color:
+    rgba(0,255,255,0.15);
+}
+
+/* ===================================
+   LOG HEADER
+=================================== */
+
+.log-header {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom:
+    var(--space-sm);
+}
+
+/* ===================================
+   LOG STATUS
+=================================== */
+
+.log-status {
+
+  color:
+    var(--color-success);
+
+  font-size: 0.85rem;
+}
+
+/* ===================================
+   TERMINAL TEXT
+=================================== */
+
+.log-message {
+
+  font-family:
+    monospace;
+
+  color:
+    var(--text-secondary);
+}

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    Analytics | Emotional Black Market
+  </title>
+
+  <!-- CSS -->
+
+  <link
+    rel="stylesheet"
+    href="../css/main.css"
+  />
+
+  <!-- CHART -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+  <!-- BACKGROUND -->
+
+  <div class="background-grid"></div>
+
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+
+  <!-- APP -->
+
+  <div class="app-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <div class="logo">
+
+        <h1>
+          EBM
+        </h1>
+
+        <span>
+          Emotional Black Market
+        </span>
+
+      </div>
+
+      <nav>
+
+        <a href="./dashboard.html">
+          Dashboard
+        </a>
+
+        <a href="./users.html">
+          Users
+        </a>
+
+        <a href="./emotions.html">
+          Emotions
+        </a>
+
+        <a href="./transactions.html">
+          Transactions
+        </a>
+
+        <a
+          href="./analytics.html"
+          class="active"
+        >
+          Analytics
+        </a>
+
+        <a href="./admin.html">
+          Admin
+        </a>
+
+      </nav>
+
+      <div class="system-status">
+
+        <span class="online-dot"></span>
+
+        SYSTEM ONLINE
+
+      </div>
+
+      <button
+        class="btn btn-danger btn-full"
+        onclick="logout()"
+      >
+
+        Logout
+
+      </button>
+
+    </aside>
+
+    <!-- CONTENT -->
+
+    <main class="page-content">
+
+      <!-- HEADER -->
+
+      <div class="analytics-header">
+
+        <div>
+
+          <h1 class="page-title">
+            Analytics
+          </h1>
+
+          <p class="page-description">
+
+            Analyze emotional market trends,
+            volatility and trading behavior.
+
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- KPIs -->
+
+      <section class="kpi-grid">
+
+        <!-- REVENUE -->
+
+        <div class="card kpi-card">
+
+          <small>
+            Total Revenue
+          </small>
+
+          <div
+            id="totalRevenue"
+            class="kpi-value"
+          >
+
+            €0
+
+          </div>
+
+        </div>
+
+        <!-- TRADES -->
+
+        <div class="card kpi-card">
+
+          <small>
+            Total Trades
+          </small>
+
+          <div
+            id="totalTrades"
+            class="kpi-value"
+          >
+
+            0
+
+          </div>
+
+        </div>
+
+        <!-- MARKET VALUE -->
+
+        <div class="card kpi-card">
+
+          <small>
+            Market Value
+          </small>
+
+          <div
+            id="marketValue"
+            class="kpi-value"
+          >
+
+            €0
+
+          </div>
+
+        </div>
+
+        <!-- ACTIVE USERS -->
+
+        <div class="card kpi-card">
+
+          <small>
+            Active Users
+          </small>
+
+          <div
+            id="activeUsers"
+            class="kpi-value"
+          >
+
+            0
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ANALYTICS GRID -->
+
+      <section class="analytics-grid">
+
+        <!-- MARKET CHART -->
+
+        <div class="card chart-card">
+
+          <div class="card-header">
+
+            <h3 class="card-title">
+
+              Market Volatility
+
+            </h3>
+
+          </div>
+
+          <div class="chart-container">
+
+            <canvas
+              id="marketChart"
+            ></canvas>
+
+          </div>
+
+        </div>
+
+        <!-- USERS CHART -->
+
+        <div class="card chart-card">
+
+          <div class="card-header">
+
+            <h3 class="card-title">
+
+              User Activity
+
+            </h3>
+
+          </div>
+
+          <div class="chart-container">
+
+            <canvas
+              id="usersChart"
+            ></canvas>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- INSIGHTS -->
+
+      <section class="page-section mt-lg">
+
+        <div class="card">
+
+          <div class="card-header">
+
+            <h3 class="card-title">
+
+              Market Insights
+
+            </h3>
+
+          </div>
+
+          <div
+            id="insightsContainer"
+            class="insights-panel"
+          ></div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- JS -->
+
+  <!-- CORE -->
+
+  <script src="../js/core/config.js"></script>
+  <script src="../js/core/storage.js"></script>
+  <script src="../js/core/api.js"></script>
+  <script src="../js/core/auth.js"></script>
+
+  <!-- UI -->
+
+  <script src="../js/ui/toasts.js"></script>
+  <script src="../js/ui/loaders.js"></script>
+  <script src="../js/ui/modals.js"></script>
+  <script src="../js/ui/sidebar.js"></script>
+  <script src="../js/ui/app.js"></script>
+
+  <!-- SERVICES -->
+
+  <script src="../js/services/analytics.service.js"></script>
+
+  <!-- UTILS -->
+
+  <script src="../js/utils/constants.js"></script>
+  <script src="../js/utils/helpers.js"></script>
+  <script src="../js/utils/validators.js"></script>
+  <script src="../js/utils/formatters.js"></script>
+
+  <!-- PAGE -->
+
+  <script src="../js/pages/analytics.js"></script>
+
+</body>
+
+</html>

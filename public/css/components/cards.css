@@ -1,0 +1,90 @@
+/* ===================================
+   CARD
+=================================== */
+
+.card {
+
+  background:
+    var(--bg-card);
+
+  border:
+    1px solid var(--border-primary);
+
+  border-radius:
+    var(--radius-lg);
+
+  padding:
+    var(--space-xl);
+
+  backdrop-filter:
+    var(--blur-card);
+
+  box-shadow:
+    var(--shadow-primary);
+
+  transition:
+    var(--transition-normal);
+}
+
+/* ===================================
+   HOVER
+=================================== */
+
+.card:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    var(--shadow-neon);
+}
+
+/* ===================================
+   CARD HEADER
+=================================== */
+
+.card-header {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom:
+    var(--space-lg);
+}
+
+/* ===================================
+   CARD TITLE
+=================================== */
+
+.card-title {
+
+  font-size: 1.2rem;
+
+  font-weight: 600;
+}
+
+/* ===================================
+   STATS CARD
+=================================== */
+
+.stats-card {
+
+  min-height: 180px;
+}
+
+/* ===================================
+   GRID
+=================================== */
+
+.cards-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+  gap:
+    var(--space-lg);
+}

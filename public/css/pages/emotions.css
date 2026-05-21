@@ -1,0 +1,169 @@
+/* ===================================
+   MARKET HEADER
+=================================== */
+
+.market-header {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom:
+    var(--space-xl);
+}
+
+/* ===================================
+   MARKET GRID
+=================================== */
+
+.market-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap:
+    var(--space-lg);
+}
+
+/* ===================================
+   EMOTION CARD
+=================================== */
+
+.emotion-card {
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* ===================================
+   GLOW EFFECT
+=================================== */
+
+.emotion-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: -50%;
+  right: -50%;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(0,255,255,0.08);
+
+  filter:
+    blur(70px);
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+.emotion-header {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom:
+    var(--space-lg);
+}
+
+/* ===================================
+   BADGE
+=================================== */
+
+.emotion-badge {
+
+  padding:
+    8px 14px;
+
+  border-radius:
+    var(--radius-full);
+
+  background:
+    rgba(0,255,255,0.08);
+
+  border:
+    1px solid rgba(0,255,255,0.15);
+
+  color:
+    var(--color-primary);
+
+  font-size: 0.85rem;
+}
+
+/* ===================================
+   DESCRIPTION
+=================================== */
+
+.emotion-description {
+
+  margin-bottom:
+    var(--space-lg);
+
+  line-height: 1.8;
+}
+
+/* ===================================
+   STATS
+=================================== */
+
+.emotion-stats {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom:
+    var(--space-lg);
+}
+
+/* ===================================
+   VALUE
+=================================== */
+
+.emotion-value {
+
+  color:
+    var(--color-primary);
+
+  font-size: 1.5rem;
+
+  font-weight: 600;
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+.emotion-footer {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+/* ===================================
+   ACTIONS
+=================================== */
+
+.emotion-actions {
+
+  display: flex;
+
+  gap:
+    var(--space-sm);
+}

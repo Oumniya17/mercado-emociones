@@ -1,0 +1,313 @@
+/* ===================================
+   CORE
+=================================== */
+
+@import url('./core/reset.css');
+@import url('./core/variables.css');
+@import url('./core/typography.css');
+@import url('./core/layout.css');
+@import url('./core/animations.css');
+
+/* ===================================
+   COMPONENTS
+=================================== */
+
+@import url('./components/buttons.css');
+@import url('./components/forms.css');
+@import url('./components/cards.css');
+@import url('./components/tables.css');
+@import url('./components/navbar.css');
+@import url('./components/sidebar.css');
+@import url('./components/modals.css');
+@import url('./components/toasts.css');
+@import url('./components/loaders.css');
+
+/* ===================================
+   PAGES
+=================================== */
+
+@import url('./pages/auth.css');
+@import url('./pages/dashboard.css');
+@import url('./pages/users.css');
+@import url('./pages/emotions.css');
+@import url('./pages/transactions.css');
+@import url('./pages/analytics.css');
+@import url('./pages/admin.css');
+
+/* ===================================
+   GLOBAL APP
+=================================== */
+
+body {
+
+  background:
+    var(--bg-main);
+
+  color:
+    var(--text-primary);
+}
+
+/* ===================================
+   SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar {
+
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+
+  background:
+    rgba(255,255,255,0.03);
+}
+
+::-webkit-scrollbar-thumb {
+
+  background:
+    rgba(0,255,255,0.2);
+
+  border-radius:
+    var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+  background:
+    rgba(0,255,255,0.35);
+}
+
+/* ===================================
+   SELECTION
+=================================== */
+
+::selection {
+
+  background:
+    rgba(0,255,255,0.2);
+
+  color: white;
+}
+
+/* ===================================
+   PAGE SECTION
+=================================== */
+
+.page-section {
+
+  margin-bottom:
+    var(--space-xl);
+}
+
+/* ===================================
+   PAGE TITLE
+=================================== */
+
+.page-title {
+
+  margin-bottom:
+    var(--space-sm);
+}
+
+/* ===================================
+   PAGE DESCRIPTION
+=================================== */
+
+.page-description {
+
+  max-width: 700px;
+}
+
+/* ===================================
+   FLEX UTILITIES
+=================================== */
+
+.flex {
+
+  display: flex;
+}
+
+.flex-between {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-center {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===================================
+   GRID UTILITIES
+=================================== */
+
+.grid {
+
+  display: grid;
+}
+
+.grid-2 {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap:
+    var(--space-lg);
+}
+
+.grid-3 {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap:
+    var(--space-lg);
+}
+
+.grid-4 {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap:
+    var(--space-lg);
+}
+
+/* ===================================
+   GAP UTILITIES
+=================================== */
+
+.gap-sm {
+
+  gap:
+    var(--space-sm);
+}
+
+.gap-md {
+
+  gap:
+    var(--space-md);
+}
+
+.gap-lg {
+
+  gap:
+    var(--space-lg);
+}
+
+/* ===================================
+   MARGIN UTILITIES
+=================================== */
+
+.mt-sm {
+
+  margin-top:
+    var(--space-sm);
+}
+
+.mt-md {
+
+  margin-top:
+    var(--space-md);
+}
+
+.mt-lg {
+
+  margin-top:
+    var(--space-lg);
+}
+
+.mb-sm {
+
+  margin-bottom:
+    var(--space-sm);
+}
+
+.mb-md {
+
+  margin-bottom:
+    var(--space-md);
+}
+
+.mb-lg {
+
+  margin-bottom:
+    var(--space-lg);
+}
+
+/* ===================================
+   TEXT UTILITIES
+=================================== */
+
+.text-center {
+
+  text-align: center;
+}
+
+.text-muted {
+
+  color:
+    var(--text-muted);
+}
+
+.text-secondary {
+
+  color:
+    var(--text-secondary);
+}
+
+.text-primary {
+
+  color:
+    var(--color-primary);
+}
+
+/* ===================================
+   WIDTH UTILITIES
+=================================== */
+
+.w-full {
+
+  width: 100%;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 1200px) {
+
+  .grid-4 {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+
+  .grid-3,
+  .grid-2 {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .grid-4 {
+
+    grid-template-columns:
+      1fr;
+  }
+}

@@ -1,0 +1,184 @@
+/* ===================================
+   MODAL OVERLAY
+=================================== */
+
+.modal {
+
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    rgba(0,0,0,0.7);
+
+  backdrop-filter:
+    blur(8px);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    var(--space-lg);
+
+  z-index: 9999;
+
+  animation:
+    fadeModal 0.3s ease;
+}
+
+/* ===================================
+   HIDDEN
+=================================== */
+
+.modal.hidden {
+
+  display: none;
+}
+
+/* ===================================
+   CONTENT
+=================================== */
+
+.modal-content {
+
+  width: 100%;
+  max-width: 650px;
+
+  background:
+    var(--bg-card);
+
+  border:
+    1px solid var(--border-primary);
+
+  border-radius:
+    var(--radius-lg);
+
+  padding:
+    var(--space-xl);
+
+  backdrop-filter:
+    var(--blur-card);
+
+  box-shadow:
+    var(--shadow-primary);
+
+  animation:
+    modalPop 0.35s ease;
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+.modal-header {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom:
+    var(--space-lg);
+}
+
+/* ===================================
+   TITLE
+=================================== */
+
+.modal-title {
+
+  font-size: 1.5rem;
+}
+
+/* ===================================
+   CLOSE BUTTON
+=================================== */
+
+.modal-close {
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  color:
+    var(--text-secondary);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    var(--transition-normal);
+}
+
+.modal-close:hover {
+
+  background:
+    rgba(255,255,255,0.1);
+
+  color:
+    white;
+
+  transform:
+    rotate(90deg);
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+.modal-footer {
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap:
+    var(--space-md);
+
+  margin-top:
+    var(--space-xl);
+}
+
+/* ===================================
+   ANIMATIONS
+=================================== */
+
+@keyframes fadeModal {
+
+  from {
+
+    opacity: 0;
+  }
+
+  to {
+
+    opacity: 1;
+  }
+}
+
+@keyframes modalPop {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      scale(0.9);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      scale(1);
+  }
+}

@@ -1,0 +1,110 @@
+/* ===================================
+   BASE BUTTON
+=================================== */
+
+.btn {
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 14px 24px;
+
+  border-radius:
+    var(--radius-md);
+
+  font-weight: 600;
+
+  font-size: 0.95rem;
+
+  transition:
+    var(--transition-normal);
+
+  cursor: pointer;
+
+  border: none;
+}
+
+/* ===================================
+   PRIMARY
+=================================== */
+
+.btn-primary {
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+
+  color: white;
+
+  box-shadow:
+    0 10px 25px rgba(0,255,255,0.18);
+}
+
+.btn-primary:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(0,255,255,0.28);
+}
+
+/* ===================================
+   SECONDARY
+=================================== */
+
+.btn-secondary {
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid var(--border-primary);
+
+  color:
+    var(--text-primary);
+}
+
+.btn-secondary:hover {
+
+  background:
+    rgba(255,255,255,0.08);
+}
+
+/* ===================================
+   DANGER
+=================================== */
+
+.btn-danger {
+
+  background:
+    rgba(255,77,122,0.12);
+
+  border:
+    1px solid rgba(255,77,122,0.2);
+
+  color:
+    var(--color-danger);
+}
+
+.btn-danger:hover {
+
+  background:
+    rgba(255,77,122,0.2);
+}
+
+/* ===================================
+   FULL WIDTH
+=================================== */
+
+.btn-full {
+
+  width: 100%;
+}

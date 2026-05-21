@@ -1,0 +1,213 @@
+/* ===================================
+   LOGIN PAGE
+=================================== */
+
+.login-page {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    var(--space-xl);
+}
+
+/* ===================================
+   LOGIN CONTAINER
+=================================== */
+
+.login-container {
+
+  width: 100%;
+  max-width: 1400px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  overflow: hidden;
+
+  border-radius:
+    var(--radius-lg);
+
+  background:
+    rgba(12,16,35,0.7);
+
+  border:
+    1px solid var(--border-primary);
+
+  backdrop-filter:
+    var(--blur-card);
+
+  box-shadow:
+    var(--shadow-primary);
+}
+
+/* ===================================
+   LEFT PANEL
+=================================== */
+
+.login-left {
+
+  padding:
+    80px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  position: relative;
+}
+
+/* ===================================
+   HERO
+=================================== */
+
+.hero-title {
+
+  margin-top:
+    var(--space-xl);
+
+  margin-bottom:
+    var(--space-lg);
+}
+
+.hero-description {
+
+  max-width: 520px;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+/* ===================================
+   STATUS
+=================================== */
+
+.system-status {
+
+  margin-top:
+    var(--space-xl);
+
+  display: flex;
+
+  align-items: center;
+
+  gap:
+    var(--space-sm);
+
+  color:
+    var(--color-success);
+}
+
+/* ===================================
+   ONLINE DOT
+=================================== */
+
+.online-dot {
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background:
+    var(--color-success);
+
+  box-shadow:
+    0 0 12px rgba(0,255,149,0.5);
+}
+
+/* ===================================
+   RIGHT PANEL
+=================================== */
+
+.login-right {
+
+  padding:
+    80px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(255,255,255,0.02);
+}
+
+/* ===================================
+   LOGIN CARD
+=================================== */
+
+.login-card {
+
+  width: 100%;
+  max-width: 460px;
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+.login-header {
+
+  margin-bottom:
+    var(--space-xl);
+}
+
+/* ===================================
+   LOGIN BUTTON
+=================================== */
+
+.login-btn {
+
+  margin-top:
+    var(--space-md);
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+.login-footer {
+
+  margin-top:
+    var(--space-lg);
+
+  text-align: center;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 1100px) {
+
+  .login-container {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .login-left {
+
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .login-right {
+
+    padding:
+      40px 24px;
+  }
+}

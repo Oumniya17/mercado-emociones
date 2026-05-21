@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    Dashboard | Emotional Black Market
+  </title>
+
+  <!-- CSS -->
+
+  <link
+    rel="stylesheet"
+    href="../css/main.css"
+  />
+
+  <!-- CHART -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+  <!-- BACKGROUND -->
+
+  <div class="background-grid"></div>
+
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+
+  <!-- APP -->
+
+  <div class="app-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <!-- LOGO -->
+
+      <div class="logo">
+
+        <h1>
+          EBM
+        </h1>
+
+        <span>
+          Emotional Black Market
+        </span>
+
+      </div>
+
+      <!-- NAV -->
+
+      <nav>
+
+        <a
+          href="./dashboard.html"
+          class="active"
+        >
+          Dashboard
+        </a>
+
+        <a href="./users.html">
+          Users
+        </a>
+
+        <a href="./emotions.html">
+          Emotions
+        </a>
+
+        <a href="./transactions.html">
+          Transactions
+        </a>
+
+        <a href="./analytics.html">
+          Analytics
+        </a>
+
+        <a href="./admin.html">
+          Admin
+        </a>
+
+      </nav>
+
+      <!-- STATUS -->
+
+      <div class="system-status">
+
+        <span class="online-dot"></span>
+
+        SYSTEM ONLINE
+
+      </div>
+
+      <!-- LOGOUT -->
+
+      <button
+        class="btn btn-danger btn-full"
+        onclick="logout()"
+      >
+
+        Logout
+
+      </button>
+
+    </aside>
+
+    <!-- CONTENT -->
+
+    <main class="page-content">
+
+      <!-- NAVBAR -->
+
+      <div class="navbar">
+
+        <div>
+
+          <h1 class="navbar-title">
+            Dashboard
+          </h1>
+
+          <p class="page-description">
+
+            Monitor emotional market activity
+            and neural transactions.
+
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- STATS -->
+
+      <section class="dashboard-grid page-section">
+
+        <!-- USERS -->
+
+        <div class="card stats-card">
+
+          <small>
+            Total Users
+          </small>
+
+          <div
+            id="totalUsers"
+            class="stats-value"
+          >
+
+            0
+
+          </div>
+
+        </div>
+
+        <!-- EMOTIONS -->
+
+        <div class="card stats-card">
+
+          <small>
+            Emotional Assets
+          </small>
+
+          <div
+            id="totalEmotions"
+            class="stats-value"
+          >
+
+            0
+
+          </div>
+
+        </div>
+
+        <!-- TRANSACTIONS -->
+
+        <div class="card stats-card">
+
+          <small>
+            Transactions
+          </small>
+
+          <div
+            id="totalTransactions"
+            class="stats-value"
+          >
+
+            0
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- CHARTS -->
+
+      <section class="charts-grid">
+
+        <!-- CHART -->
+
+        <div class="card">
+
+          <div class="card-header">
+
+            <h3 class="card-title">
+
+              Market Activity
+
+            </h3>
+
+          </div>
+
+          <canvas
+            id="dashboardChart"
+          ></canvas>
+
+        </div>
+
+        <!-- ACTIVITY -->
+
+        <div class="card">
+
+          <div class="card-header">
+
+            <h3 class="card-title">
+
+              Recent Activity
+
+            </h3>
+
+          </div>
+
+          <div
+            id="activityFeed"
+            class="activity-feed"
+          ></div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- JS -->
+
+  <!-- CORE -->
+
+  <script src="../js/core/config.js"></script>
+  <script src="../js/core/storage.js"></script>
+  <script src="../js/core/api.js"></script>
+  <script src="../js/core/auth.js"></script>
+
+  <!-- UI -->
+
+  <script src="../js/ui/toasts.js"></script>
+  <script src="../js/ui/loaders.js"></script>
+  <script src="../js/ui/modals.js"></script>
+  <script src="../js/ui/sidebar.js"></script>
+  <script src="../js/ui/app.js"></script>
+
+  <!-- SERVICES -->
+
+  <script src="../js/services/analytics.service.js"></script>
+
+  <!-- UTILS -->
+
+  <script src="../js/utils/constants.js"></script>
+  <script src="../js/utils/helpers.js"></script>
+  <script src="../js/utils/validators.js"></script>
+  <script src="../js/utils/formatters.js"></script>
+
+  <!-- PAGE -->
+
+  <script src="../js/pages/dashboard.js"></script>
+
+</body>
+
+</html>

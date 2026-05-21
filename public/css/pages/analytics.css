@@ -1,0 +1,139 @@
+/* ===================================
+   ANALYTICS HEADER
+=================================== */
+
+.analytics-header {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom:
+    var(--space-xl);
+}
+
+/* ===================================
+   KPI GRID
+=================================== */
+
+.kpi-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+
+  gap:
+    var(--space-lg);
+
+  margin-bottom:
+    var(--space-xl);
+}
+
+/* ===================================
+   KPI CARD
+=================================== */
+
+.kpi-card {
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* ===================================
+   KPI VALUE
+=================================== */
+
+.kpi-value {
+
+  margin-top:
+    var(--space-md);
+
+  font-size: 2.8rem;
+
+  color:
+    var(--color-primary);
+}
+
+/* ===================================
+   ANALYTICS GRID
+=================================== */
+
+.analytics-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:
+    var(--space-lg);
+}
+
+/* ===================================
+   CHART CARD
+=================================== */
+
+.chart-card {
+
+  min-height: 450px;
+}
+
+/* ===================================
+   CHART CONTAINER
+=================================== */
+
+.chart-container {
+
+  position: relative;
+
+  height: 350px;
+}
+
+/* ===================================
+   INSIGHTS PANEL
+=================================== */
+
+.insights-panel {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap:
+    var(--space-md);
+}
+
+/* ===================================
+   INSIGHT ITEM
+=================================== */
+
+.insight-item {
+
+  padding:
+    var(--space-md);
+
+  border-radius:
+    var(--radius-md);
+
+  background:
+    rgba(255,255,255,0.03);
+
+  border:
+    1px solid rgba(255,255,255,0.04);
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 1200px) {
+
+  .analytics-grid {
+
+    grid-template-columns:
+      1fr;
+  }
+}

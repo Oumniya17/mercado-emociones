@@ -1,0 +1,103 @@
+/* ===================================
+   TRANSACTIONS HEADER
+=================================== */
+
+.transactions-header {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom:
+    var(--space-xl);
+}
+
+/* ===================================
+   TERMINAL GRID
+=================================== */
+
+.transactions-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    400px 1fr;
+
+  gap:
+    var(--space-lg);
+}
+
+/* ===================================
+   TRADING PANEL
+=================================== */
+
+.trading-panel {
+
+  position: sticky;
+
+  top:
+    var(--space-xl);
+
+  height: fit-content;
+}
+
+/* ===================================
+   HISTORY PANEL
+=================================== */
+
+.history-panel {
+
+  min-height: 700px;
+}
+
+/* ===================================
+   TRANSACTION STATUS
+=================================== */
+
+.transaction-status {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap:
+    var(--space-xs);
+
+  padding:
+    8px 14px;
+
+  border-radius:
+    var(--radius-full);
+
+  background:
+    rgba(0,255,149,0.08);
+
+  border:
+    1px solid rgba(0,255,149,0.15);
+
+  color:
+    var(--color-success);
+
+  font-size: 0.85rem;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 1200px) {
+
+  .transactions-grid {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .trading-panel {
+
+    position: relative;
+
+    top: 0;
+  }
+}

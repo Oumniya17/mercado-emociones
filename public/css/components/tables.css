@@ -1,0 +1,73 @@
+/* ===================================
+   TABLE WRAPPER
+=================================== */
+
+.table-wrapper {
+
+  overflow-x: auto;
+}
+
+/* ===================================
+   TABLE
+=================================== */
+
+.table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+/* ===================================
+   HEAD
+=================================== */
+
+.table thead {
+
+  background:
+    rgba(255,255,255,0.03);
+}
+
+/* ===================================
+   TH
+=================================== */
+
+.table th {
+
+  text-align: left;
+
+  padding: 18px;
+
+  color:
+    var(--color-primary);
+
+  font-weight: 600;
+
+  border-bottom:
+    1px solid var(--border-primary);
+}
+
+/* ===================================
+   TD
+=================================== */
+
+.table td {
+
+  padding: 18px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.04);
+
+  color:
+    var(--text-secondary);
+}
+
+/* ===================================
+   HOVER
+=================================== */
+
+.table tbody tr:hover {
+
+  background:
+    rgba(255,255,255,0.03);
+}
