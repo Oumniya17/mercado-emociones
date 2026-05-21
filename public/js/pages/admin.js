@@ -1,4 +1,26 @@
 /* ===================================
+   ADMIN ACCESS
+=================================== */
+
+const user =
+  JSON.parse(
+
+    localStorage.getItem(
+      "ebm_user"
+    )
+  );
+
+if (
+
+  user?.rol !== "admin"
+
+) {
+
+  window.location.href =
+    "/pages/dashboard.html";
+}
+
+/* ===================================
    ADMIN INIT
 =================================== */
 

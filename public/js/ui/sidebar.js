@@ -35,13 +35,52 @@ function setActiveSidebar() {
 }
 
 /* ===================================
+   ROLE ACCESS
+=================================== */
+
+function handleRoleAccess() {
+
+  const user =
+    JSON.parse(
+
+      localStorage.getItem(
+        "ebm_user"
+      )
+    );
+
+  // Hide admin section
+  if (
+
+    user?.rol !== "admin"
+
+  ) {
+
+    const adminLink =
+      document.querySelector(
+
+        '[href="/pages/admin.html"]'
+      );
+
+    if (adminLink) {
+
+      adminLink.style.display =
+        "none";
+    }
+  }
+}
+
+/* ===================================
    INIT SIDEBAR
 =================================== */
 
 document.addEventListener(
+
   "DOMContentLoaded",
+
   () => {
 
     setActiveSidebar();
+
+    handleRoleAccess();
   }
 );

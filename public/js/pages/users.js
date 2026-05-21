@@ -42,6 +42,19 @@ document.addEventListener(
 
 let users = [];
 
+const currentUser =
+  JSON.parse(
+
+    localStorage.getItem(
+      "ebm_user"
+    )
+  );
+
+const isAdmin =
+
+  currentUser?.rol ===
+  "admin";
+
 /* ===================================
    LOAD USERS
 =================================== */
@@ -161,27 +174,43 @@ function renderUsers(
 
       <td>
 
-        <div class="user-actions">
+        ${isAdmin ? `
 
-          <button
-            class="btn btn-secondary"
-            onclick="openEditUser('${user._id}')"
+          <div class="user-actions">
+
+            <button
+              class="btn btn-secondary"
+              onclick="openEditUser('${user._id}')"
+            >
+
+              Edit
+
+            </button>
+
+            <button
+              class="btn btn-danger"
+              onclick="handleDeleteUser('${user._id}')"
+            >
+
+              Delete
+
+            </button>
+
+          </div>
+
+        ` : `
+        
+          <span
+            style="
+              color:#9ca3af;
+            "
           >
 
-            Edit
+            Restricted
 
-          </button>
+          </span>
 
-          <button
-            class="btn btn-danger"
-            onclick="handleDeleteUser('${user._id}')"
-          >
-
-            Delete
-
-          </button>
-
-        </div>
+        `}
 
       </td>
 
@@ -197,6 +226,22 @@ function renderUsers(
 =================================== */
 
 function initUserForm() {
+
+  if (!isAdmin) {
+
+    const form =
+      document.getElementById(
+        "createUserForm"
+      );
+
+    if (form) {
+
+      form.style.display =
+        "none";
+    }
+
+    return;
+  }
 
   const form =
     document.getElementById(
@@ -281,6 +326,16 @@ async function handleDeleteUser(
   id
 ) {
 
+  if (!isAdmin) {
+
+    return showToast(
+
+      "Admin only",
+
+      TOAST_TYPES.ERROR
+    );
+  }
+
   const confirmed =
     confirm(
       "Delete this user?"
@@ -316,6 +371,16 @@ async function handleDeleteUser(
 function openEditUser(
   id
 ) {
+
+  if (!isAdmin) {
+
+    return showToast(
+
+      "Admin only",
+
+      TOAST_TYPES.ERROR
+    );
+  }
 
   showToast(
     "Edit modal coming soon",
